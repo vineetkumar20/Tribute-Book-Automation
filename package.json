@@ -1,0 +1,19 @@
+{
+  "name": "tribute-book-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch",
+    "e2e_stage_run": "npx nightwatch --env chrome --require cucumberHooks.js --config configs/stage.conf.js --tags \"@all\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "chromedriver": "^137.0.1",
+    "nightwatch": "^3.12.1"
+  }
+}
