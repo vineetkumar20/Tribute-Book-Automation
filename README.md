@@ -1,17 +1,53 @@
-npx nightwatch --env browserstack.chrome.macOS --config configs/stage.conf.js --tags "@stage" 
+# 🧪 Nightwatch Automation Framework
 
-npx nightwatch --env safari --config configs/stage.conf.js --tags "@TC_001001" 
+This project uses Nightwatch.js for end-to-end testing across different environments and configurations.
 
-npx nightwatch --env chrome  --config configs/dev.conf.js --tags @gsfesf
+---
 
-npx nightwatch --tags "@gsef22" 
+## 🚀 Running Tests
 
-signGuestBook
+### ✅ Run on BrowserStack (Chrome on macOS)
+```bash
+npx nightwatch --env browserstack.chrome.macOS --config configs/stage.conf.js --tags "@stage"
+```
 
-npx nightwatch --tags "@ghgsefes" 
+### ✅ Run on Safari (Local)
+```bash
+npx nightwatch --env safari --config configs/stage.conf.js --tags "@TC_001001"
+```
 
-guestBook
+### ✅ Run on Chrome (Dev Environment)
+```bash
+npx nightwatch --env chrome --config configs/dev.conf.js --tags @gsfesf
+```
 
-if changing book for automation test:
-1. add Media "This media will be used for automation testing"
-2. add Tributes "Tribute00202", TR0020202
+### ✅ Run with Default Environment
+```bash
+npx nightwatch --tags "@gsef22"
+```
+
+---
+
+## 📘 Test Tags
+
+- `@ghgsefes` → Runs the `signGuestBook` test
+- `@gsef22` → Runs the `guestBook` test
+
+---
+
+## 🛠️ Notes for Automation Test Setup
+
+When changing the book for automation testing:
+
+1. **Add Media**  
+   Use the media titled:  
+   ```
+   "This media will be used for automation testing"
+   ```
+
+2. **Add Tributes**  
+   Use the following tribute details:  
+   ```
+   Tribute Name: "Tribute00202"
+   Tribute ID: TR0020202
+   ```
