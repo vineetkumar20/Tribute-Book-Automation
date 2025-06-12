@@ -29,12 +29,12 @@ export default {
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/adding-plugins.html
   plugins: [],
-  
+
   // See https://nightwatchjs.org/guide/concepts/test-globals.html#external-test-globals
-  globals_path : '',
+  globals_path: '',
 
   webdriver: {},
-  
+
   test_workers: {
     enabled: true,
     workers: 'auto'
@@ -52,7 +52,7 @@ export default {
       },
 
       desiredCapabilities: {
-        browserName : 'chrome'
+        browserName: 'chrome'
       },
 
       webdriver: {
@@ -61,11 +61,11 @@ export default {
       }
     },
 
-    
+
 
     firefox: {
-      desiredCapabilities : {
-        browserName : 'firefox',
+      desiredCapabilities: {
+        browserName: 'firefox',
         acceptInsecureCerts: true,
         'moz:firefoxOptions': {
           args: [
@@ -85,9 +85,9 @@ export default {
     },
 
     chrome: {
-      desiredCapabilities : {
-        browserName : 'chrome',
-        'goog:chromeOptions' : {
+      desiredCapabilities: {
+        browserName: 'chrome',
+        'goog:chromeOptions': {
           // More info on Chromedriver: https://sites.google.com/a/chromium.org/chromedriver/
           //
           // w3c:false tells Chromedriver to run using the legacy JSONWire protocol (not required in Chrome 78)
@@ -111,9 +111,9 @@ export default {
     },
 
     edge: {
-      desiredCapabilities : {
-        browserName : 'MicrosoftEdge',
-        'ms:edgeOptions' : {
+      desiredCapabilities: {
+        browserName: 'MicrosoftEdge',
+        'ms:edgeOptions': {
           w3c: true,
           // More info on EdgeDriver: https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/capabilities-edge-options
           args: [
@@ -149,14 +149,15 @@ export default {
         // define cucumber specific options
         options: {
           //set the feature path
-          
-        feature_path: 'features',
-        
-        auto_start_session: true,
 
-        parallel: 2, // set the number of parallel workers to use (can also be defined in the cli as --parallel=1)
+          feature_path: 'features',
+          format: ['json:tests_output/cucumber.json'],
 
-        tags: '' // leave this empty here; use CLI to pass tags
+          auto_start_session: true,
+
+          parallel: 2, // set the number of parallel workers to use (can also be defined in the cli as --parallel=1)
+
+          tags: '', // leave this empty here; use CLI to pass tags
           // set the output format
 
           // start the webdriver session automatically (enabled by default)
@@ -169,14 +170,14 @@ export default {
         abortOnElementLocateError: true
       }
     },
-    
-src_folders: [],
-page_objects_path: '',
-globals_path: '',
-webdriver: {
-  start_process: true,
-  server_path: '',
-},
+
+    src_folders: [],
+    page_objects_path: '',
+    globals_path: '',
+    webdriver: {
+      start_process: true,
+      server_path: '',
+    },
 
 
     //////////////////////////////////////////////////////////////////////////////////
@@ -195,7 +196,7 @@ webdriver: {
       // More info on configuring capabilities can be found on:
       // https://www.browserstack.com/automate/capabilities?tag=selenium-4
       desiredCapabilities: {
-        'bstack:options' : {
+        'bstack:options': {
           userName: '${BROWSERSTACK_USERNAME}',
           accessKey: '${BROWSERSTACK_ACCESS_KEY}',
         }
@@ -223,7 +224,7 @@ webdriver: {
       extends: 'browserstack',
       desiredCapabilities: {
         browserName: 'chrome',
-        chromeOptions : {
+        chromeOptions: {
           w3c: true
         }
       }
@@ -279,7 +280,7 @@ webdriver: {
       // More info on configuring capabilities can be found on:
       // https://docs.saucelabs.com/dev/test-configuration-options/
       desiredCapabilities: {
-        'sauce:options' : {
+        'sauce:options': {
           username: '${SAUCE_USERNAME}',
           accessKey: '${SAUCE_ACCESS_KEY}',
           screenResolution: '1280x1024'
@@ -303,7 +304,7 @@ webdriver: {
         javascriptEnabled: true,
         acceptSslCerts: true,
         timeZone: 'London',
-        chromeOptions : {
+        chromeOptions: {
           w3c: true
         }
       }
@@ -345,7 +346,7 @@ webdriver: {
       extends: 'selenium_server',
       desiredCapabilities: {
         browserName: 'chrome',
-        chromeOptions : {
+        chromeOptions: {
           w3c: true
         }
       }

@@ -1,0 +1,159 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "generate-qr-code;generate-qr-code",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Generate QR Code",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3542130999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I navigate and log into admin portal",
+            "match": {
+              "location": "tests\\step-definitions\\background.spec.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13173696700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I click \"Generate QR Code\" on the left hand nav",
+            "match": {
+              "location": "tests\\step-definitions\\background.spec.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2806711699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I enter FuneralHome DomainID \"701a2c2bde494fc1a710a0ba00cceaf6\"",
+            "match": {
+              "location": "tests\\step-definitions\\generateQRcode.spec.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1379785899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click Generate QR Code",
+            "match": {
+              "location": "tests\\step-definitions\\generateQRcode.spec.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3960862399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "QR Code has been generated",
+            "match": {
+              "location": "tests\\step-definitions\\generateQRcode.spec.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109533400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 182295999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@dev",
+            "line": 1
+          },
+          {
+            "name": "@stage",
+            "line": 1
+          },
+          {
+            "name": "@prod",
+            "line": 1
+          },
+          {
+            "name": "@adminPortal",
+            "line": 2
+          },
+          {
+            "name": "@qrCode",
+            "line": 3
+          },
+          {
+            "name": "@all",
+            "line": 4
+          },
+          {
+            "name": "@QR001",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "generate-qr-code",
+    "line": 5,
+    "keyword": "Feature",
+    "name": "Generate QR Code",
+    "tags": [
+      {
+        "name": "@dev",
+        "line": 1
+      },
+      {
+        "name": "@stage",
+        "line": 1
+      },
+      {
+        "name": "@prod",
+        "line": 1
+      },
+      {
+        "name": "@adminPortal",
+        "line": 2
+      },
+      {
+        "name": "@qrCode",
+        "line": 3
+      },
+      {
+        "name": "@all",
+        "line": 4
+      }
+    ],
+    "uri": "tests\\features\\AdminPortal\\generateQRCode.feature"
+  }
+]

@@ -127,7 +127,9 @@ module.exports = {
                 // define cucumber specific options
                 options: {
                     //set the feature path
-                    feature_path: 'tests/features'
+                    feature_path: 'tests/features',
+
+                    format: ['json:tests_output/cucumber.json'],
                     // start the webdriver session automatically (enabled by default)
                     // auto_start_session: true
 
@@ -163,6 +165,17 @@ module.exports = {
                 ]
             }
         },
+
+
+        chrome_headless: {
+            desiredCapabilities: {
+                browserName: 'chrome',
+                chromeOptions: {
+                    args: ['--headless', '--no-sandbox', '--disable-gpu', '--window-size=1920,1080']
+                }
+            }
+        },
+
 
 
         safari: {
